@@ -45,9 +45,7 @@
         - document.getElementsByClassName()
         - document.getElementsByTagName()
         
-        3. Crie uma função que mude a cor do quadrado vermelho para branco.
-        4. Crie uma função que corrija o texto da tag <h1>.
-        5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        
         6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
 
@@ -64,6 +62,28 @@
           square.style.backgroundColor = "rgb(76,164,109)";
         }
         changeSquareColor();
+
+        // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        function changeRedSquareToWhite() {
+          let square = document.getElementsByClassName("center-content");
+          square[0].style.backgroundColor = "rgb(255 , 255 , 255)" ;
+        }
+        changeRedSquareToWhite();
+
+        // 4. Crie uma função que corrija o texto da tag <h1>.
+        function changeTextTitle() {
+          let title = document.getElementsByTagName("h1");
+          title[0].innerText = "Exercício 5.1 - Javascript";
+        }
+        changeTextTitle();
+
+        // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        function changeTextToUppercase() {
+          let text = document.getElementsByTagName("p")[0].innerText;
+          let textUppercase = document.getElementsByTagName("p")[0];
+          textUppercase.innerText = text.toUpperCase();
+        }
+        changeTextToUppercase();
 
     </script>
   </body>
