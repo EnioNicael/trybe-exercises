@@ -69,6 +69,36 @@
       div.className = 'main-content';
       body.appendChild(div);
 
+      // 3 - Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let main = document.querySelector(".main-content");
+      let divMain = document.createElement('div');
+      divMain.className = 'center-content';
+      main.appendChild(divMain);
+
+      // 4 - Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let divCenter = document.querySelector('.center-content');
+      let paragraph = document.createElement('p');
+      paragraph.innerText = 'Hello';
+      divCenter.appendChild(paragraph);
+
+      // 5 - Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      let divLeft = document.createElement('div');
+      divLeft.className = 'left-content';
+      main.appendChild(divLeft);
+
+      // 6 - Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+      let divRight = document.createElement('div');
+      divRight.className = 'right-content';
+      main.appendChild(divRight);
+
+      // 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
+
+      let rightContent = document.querySelector('.right-content');
+      let img = document.createElement("img");
+      img.setAttribute('src', 'https://picsum.photos/200');
+      rightContent.appendChild(img);
+      
+      
     </script>
   </body>
 </html>
