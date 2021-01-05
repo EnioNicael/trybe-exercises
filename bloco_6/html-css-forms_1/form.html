@@ -39,13 +39,47 @@
           <select name="uf" id="uf" required></select>
         </div>
         <div class="row">
+          <p>Complemento</p>
           <input type="radio" name="casa" id="casa">
           <label for="casa">Casa</label>
           <input type="radio" name="apartamento" id="apartamento">
           <label for="apartamento">Apartamento</label>
         </div>
-    </fieldset>
-      <div class="row"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Ultimo Emprego</legend>
+        <div class="row">
+          <label for="curriculo">Resumo do curriculo</label>
+          <textarea name="curriculo" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
+        </div>
+
+        <div class="row">
+          <label for="cargo">Cargo</label>
+          <input type="text" maxlength="40" required>
+        </div>
+        <div class="row">
+          <label for="descricao-cargo">Descricao do Cargo</label>
+          <input id="descricao-cargo" type="text" maxlength="500" required>
+        </div>
+        <div class="row">
+          <label for="dt-inicio">Data de Inicio</label>
+          <input id="dt-inicio" type="text">
+          <!-- Verificar o formato da data dd/mm/aaaa .
+O dia deve ser > 0 e <= 31.
+O mês deve ser > 0 e <= 12.
+O ano não pode ser negativo.
+Caso alguma das condições for inválida no momento do envio do formulário, exibir mensagem de erro contextualizada.
+Campo obrigatório -->
+        </div>
+      </fieldset>
+      <div class="row">
+        <button id="btn-submit" type="submit">Enviar</button>
+        <!-- Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() .
+Execute as validações que foram pedidas ao longo da montagem do formulário.
+Monte uma <div> com o consolidado dos dados que foram inseridos no formulário. -->
+        <button type="reset">Limpar</button>
+      </div>
+
     </form>
   </main>
   <script src="script.js"></script>
