@@ -76,6 +76,9 @@ const dateValidate = function (date) {
   }
 };
 
+const displayFormContent = function () {
+}
+
 function handleClickSendButton(event) {
   event.preventDefault();
   const date = document.getElementById('dt-inicio').value;
