@@ -7,68 +7,73 @@
   <title>HTML & CSS e Forms</title>
 </head>
 <body>
-  <header class="section">
-    <h1 class="title">CADASTRO DE CURRICULO</h1>
+  <header class="container is-fluid">
+    <div class="has-text-centered">
+      <h1 class="title">CADASTRO DE CURRICULO</h1>
+    </div>
   </header>
-  <main class="main">
+  <main class="container">
     <form action="" method="GET">
-      <fieldset>
-        <legend>Dados Pessoais</legend>
-        <div class="row">
-          <label for="name">Nome:</label>
-          <input type="text" maxlength="40" required name="name" id="name">
+      <div class="field">
+        <div class="control">
+          <label class="label" for="name">Nome:</label>
+          <input class="input" type="text" maxlength="40" required name="name" id="name">
         </div>
-        <div class="row">
-          <label for="email">Email:</label>
-          <input type="text" name="email" id="email" maxlength="50" required>
+        <div class="control">
+          <label class="label" for="email">Email:</label>
+          <input class="input" type="text" name="email" id="email" maxlength="50" required>
         </div>
-        <div class="row">
-          <label for="cpf">CPF:</label>
-          <input type="text" name="cpf" id="cpf" maxlength="11" required>
+        <div class="control">
+          <label class="label" for="cpf">CPF:</label>
+          <input class="input" type="text" name="cpf" id="cpf" maxlength="11" required>
         </div>
-        <div class="row">
-          <label for="endereco">Endereco:</label>
-          <input type="text" name="endereco" id="endereco" maxlength="200" required>
+        <div class="control">
+          <label class="label" for="endereco">Endereco:</label>
+          <input class="input" type="text" name="endereco" id="endereco" maxlength="200" required>
         </div>
-        <div class="row">
-          <label for="cidade">Cidade:</label>
-          <input type="text" name="cidade" id="cidade" maxlength="28" required>
+        <div class="control">
+          <label class="label" for="cidade">Cidade:</label>
+          <input class="input" type="text" name="cidade" id="cidade" maxlength="28" required>
         </div>
-        <div class="row">
-          <label for="uf">UF</label>
-          <select name="uf" id="uf" required></select>
+        <div class="control">
+          <label class="label" for="uf">UF</label>
+          <select class="select" name="uf" id="uf" required></select>
         </div>
-        <div class="row">
+        <div class="control">
           <p>Complemento</p>
-          <input type="radio" name="casa" id="casa">
-          <label for="casa">Casa</label>
-          <input type="radio" name="apartamento" id="apartamento">
-          <label for="apartamento">Apartamento</label>
+          <input class="radio" type="radio" name="casa" id="casa">
+          <label class="radio" for="casa">Casa</label>
+          <input class="radio" type="radio" name="apartamento" id="apartamento">
+          <label class="radio" for="apartamento">Apartamento</label>
         </div>
-      </fieldset>
-      <fieldset>
-        <legend>Ultimo Emprego</legend>
-        <div class="row">
-          <label for="curriculo">Resumo do curriculo</label>
-          <textarea name="curriculo" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
+      </div>
+      <div class="field">
+        <span>Ultimo Emprego</span>
+        <div class="control">
+          <label class="label" for="curriculo">Resumo do curriculo</label>
+          <textarea class="textarea" name="curriculo" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
         </div>
 
-        <div class="row">
-          <label for="cargo">Cargo</label>
-          <input type="text" maxlength="40" required id="cargo">
+        <div class="control">
+          <label class="label" for="cargo">Cargo</label>
+          <input class="input" type="text" maxlength="40" required id="cargo">
         </div>
-        <div class="row">
-          <label for="descricao-cargo">Descricao do Cargo</label>
-          <input id="descricao-cargo" type="text" maxlength="500" required>
+        <div class="control">
+          <label class="label" for="descricao-cargo">Descricao do Cargo</label>
+          <input class="input" id="descricao-cargo" type="text" maxlength="500" required>
         </div>
-        <div class="row">
-          <label for="dt-inicio">Data de Inicio</label>
-          <input id="dt-inicio" type="text">
+        <div class="control">
+          <label class="label" for="dt-inicio">Data de Inicio</label>
+          <input class="input" id="dt-inicio" type="text">
         </div>
-      </fieldset>
-      <div class="row">
-        <button id="btn-submit" type="submit">Enviar</button>
-        <button type="reset">Limpar</button>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link" id="btn-submit" type="submit">Enviar</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light" type="reset">Limpar</button>
+        </div>
       </div>
     </form>
   </main>
