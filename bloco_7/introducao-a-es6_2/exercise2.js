@@ -21,12 +21,15 @@ const lesson3 = {
 const addPropertyInObj = (obj, key, value) => {
   obj[key] = value;
   // console.table(obj);
-}
+};
 
 const listObjKeys = (obj) => {
   const objKeys = Object.keys(obj);
-  console.log(objKeys);
-}
+  // console.log(objKeys);
+};
+
+const returnObjLenght = (obj) => Object.keys(obj).length;
 
 addPropertyInObj(lesson2, 'turno', 'manhã');
 listObjKeys(lesson1);
+console.log(returnObjLenght(lesson3));
