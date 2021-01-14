@@ -1,0 +1,44 @@
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+const addPropertyInObj = (obj, key, value) => {
+  obj[key] = value;
+  // console.table(obj);
+};
+
+const listObjKeys = (obj) => {
+  const objKeys = Object.keys(obj);
+  // console.log(objKeys);
+};
+
+const returnObjLenght = (obj) => Object.keys(obj).length;
+
+const listObjValues = (obj) => Object.values(obj);
+
+const joinObjects = (obj1, obj2, obj3) => {
+  let allLessons = Object.assign({}, obj1, obj2, obj3);
+  return allLessons;
+}
+
+addPropertyInObj(lesson2, 'turno', 'manhã');
+listObjKeys(lesson1);
+// console.log(returnObjLenght(lesson3));
+// console.log(listObjValues(lesson3));
+console.log(joinObjects(lesson1, lesson2, lesson3));
