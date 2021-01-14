@@ -30,6 +30,9 @@ const listObjKeys = (obj) => {
 
 const returnObjLenght = (obj) => Object.keys(obj).length;
 
+const listObjValues = (obj) => Object.values(obj);
+
 addPropertyInObj(lesson2, 'turno', 'manhã');
 listObjKeys(lesson1);
-console.log(returnObjLenght(lesson3));
+// console.log(returnObjLenght(lesson3));
+console.log(listObjValues(lesson3));
