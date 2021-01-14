@@ -32,7 +32,13 @@ const returnObjLenght = (obj) => Object.keys(obj).length;
 
 const listObjValues = (obj) => Object.values(obj);
 
+const joinObjects = (obj1, obj2, obj3) => {
+  let allLessons = Object.assign({}, obj1, obj2, obj3);
+  return allLessons;
+}
+
 addPropertyInObj(lesson2, 'turno', 'manhã');
 listObjKeys(lesson1);
 // console.log(returnObjLenght(lesson3));
-console.log(listObjValues(lesson3));
+// console.log(listObjValues(lesson3));
+console.log(joinObjects(lesson1, lesson2, lesson3));
