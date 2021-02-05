@@ -1,5 +1,3 @@
-const { expect, test } = require('@jest/globals');
-const { error } = require('console');
 const getUserName = require('./exercicio-2');
 
 describe('Testa busca de dados com Promises', () => {
@@ -13,5 +11,17 @@ describe('Testa busca de dados com Promises', () => {
     return getUserName(2).catch(error => {
       expect(error).toEqual({ error: 'User with 2 not found.' })
     })
+  });
+  it('Testa busca de dados usando async/await em caso de', async () => {
+    const data = await getUserName(4);
+    expect(data).toBe('Mark');
+  });
+  it('Testa busca de dados usando async/await em caso de erro', async () => {
+    expect.assertions(1);
+    try {
+      await getUserName(2);
+    } catch (error) {
+      expect(error).toEqual({ error: 'User with 2 not found.' })
+    }
   });
 });
