@@ -8,6 +8,7 @@ test('Testa se a funcao retorna o valor 10 e se ela foi chamada', () => {
 
   randomNumber();
 
-  expect(randomNumber()).toBe(10);
   expect(randomNumber).toHaveBeenCalled();
+  expect(randomNumber()).toBe(10);
+  expect(randomNumber).toHaveBeenCalledTimes(2);
 });
